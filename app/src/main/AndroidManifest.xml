@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.love.soma.somaafrica">
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/somaafrica"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".activity.SchoolDetails"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label=""
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.SchoolDetails" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".activity.FullPhoto"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label=""
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.FullPhoto" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.Signup"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="SomaAfrica"
+
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.Signup" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.Login"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="LOGIN"
+
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.Login" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.Contact_us"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="CONTACT_US"
+
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.Contact_us" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.Progress"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Application Status"
+
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.progress" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+
+        <provider android:authorities="com.facebook.app.FacebookContentProvider662927487207004"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true" />
+
+
+        <provider
+            android:authorities="com.love.soma.somaafrica.provider"
+            android:name="com.love.soma.somaafrica.provider.SchoolsDBProvider">
+
+        </provider>
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
+
+    </application>
+
+</manifest>
