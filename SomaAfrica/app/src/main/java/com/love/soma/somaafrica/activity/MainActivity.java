@@ -500,7 +500,9 @@ public class MainActivity extends AppCompatActivity
                 InputStream stream = getContentResolver().openInputStream(
                         data.getData());
                 bitmap = BitmapFactory.decodeStream(stream);
-                stream.close();
+                if (stream != null) {
+                    stream.close();
+                }
                 saveImageToInternalStorage(bitmap);
                 bitmap=getThumbnail("profilepic.png");
 
@@ -512,7 +514,7 @@ public class MainActivity extends AppCompatActivity
                 e.printStackTrace();
             }
         super.onActivityResult(requestCode, resultCode, data);
-        callbackManager.onActivityResult(requestCode, resultCode, data);
+        //callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
     public boolean saveImageToInternalStorage(Bitmap image) {

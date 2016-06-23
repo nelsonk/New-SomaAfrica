@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class SchoolsDB extends SQLiteOpenHelper {
 
-        private static final int DATABASE_VERSION = 9;
+        private static final int DATABASE_VERSION = 10;
         public static final String TABLE_SCHOOLS = "schools";
         public static final String DATABASE_NAME = "admission.db";
         public static final String COLUMN_ID = "_id";
